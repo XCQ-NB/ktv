@@ -1,0 +1,72 @@
+<view class="index-page">
+  <!-- 我的音浪卡片 -->
+  <view class="stats-card">
+    <view class="stats-header">
+      <text class="stats-title">我的音浪</text>
+      <text class="stats-user">{{user.stageName}}</text>
+    </view>
+    <view class="stats-row">
+      <view class="stats-item">
+        <text class="stats-value">{{user.yesterdaySoundwave}}</text>
+        <text class="stats-label">昨日音浪</text>
+      </view>
+      <view class="stats-item">
+        <text class="stats-value">{{user.todaySoundwave}}</text>
+        <text class="stats-label">今日音浪</text>
+      </view>
+      <view class="stats-item">
+        <text class="stats-value">{{formattedMonthSoundwave}}</text>
+        <text class="stats-label">本月音浪</text>
+      </view>
+    </view>
+    <view class="task-progress">
+      <view class="task-header">
+        <text class="task-label">本月任务</text>
+        <text class="task-text">{{user.monthSoundwave}} / {{formattedTarget}}</text>
+        <text class="task-percent">{{user.monthTaskProgress}}%</text>
+      </view>
+      <view class="progress-bar">
+        <view class="progress-fill" style="width: {{user.monthTaskProgress}}%"></view>
+      </view>
+    </view>
+    <view class="stats-deco">
+      <image class="stats-deco-icon" src="/assets/icons/3d/note.png" mode="aspectFit"></image>
+    </view>
+  </view>
+
+  <!-- 日常通道 -->
+  <view class="section">
+    <view class="section-title">
+      <view class="bar purple"></view>
+      <text>日常通道</text>
+    </view>
+    <view class="channel-grid">
+      <view class="channel-item" wx:for="{{channels}}" wx:key="id" bindtap="onChannelTap" data-id="{{item.id}}">
+        <image class="channel-icon" src="{{item.icon}}" mode="aspectFit"></image>
+        <text class="channel-name">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 昨日排行榜 -->
+  <view class="section">
+    <view class="section-header">
+      <view class="section-title">
+        <view class="bar purple"></view>
+        <text>昨日排行榜</text>
+      </view>
+      <view class="top-badge">TOP 10</view>
+    </view>
+    <view class="ranking-list">
+      <view class="ranking-item" wx:for="{{ranking}}" wx:key="rank">
+        <view class="rank-badge {{item.badgeClass}}">{{item.rank}}</view>
+        <view class="rank-avatar">
+          <image wx:if="{{item.avatar}}" src="{{item.avatar}}" mode="aspectFill"></image>
+          <text wx:else class="avatar-text">{{item.initial}}</text>
+        </view>
+        <text class="rank-name">{{item.name}}</text>
+        <text class="rank-score">{{item.soundwave}} 音浪</text>
+      </view>
+    </view>
+  </view>
+</view>

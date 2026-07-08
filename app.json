@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/landing/landing",
+    "pages/register/register",
+    "pages/index/index",
+    "pages/checkin/checkin",
+    "pages/dashboard/dashboard",
+    "pages/schedule/schedule",
+    "pages/profile/profile",
+    "pages/leave/leave",
+    "pages/task/task",
+    "pages/notice/notice"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "麦克团队",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F5F6F7"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#7B78ED",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/icons/home.png",
+        "selectedIconPath": "assets/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/checkin/checkin",
+        "text": "打卡",
+        "iconPath": "assets/icons/checkin.png",
+        "selectedIconPath": "assets/icons/checkin-active.png"
+      },
+      {
+        "pagePath": "pages/dashboard/dashboard",
+        "text": "看板",
+        "iconPath": "assets/icons/dashboard.png",
+        "selectedIconPath": "assets/icons/dashboard-active.png"
+      },
+      {
+        "pagePath": "pages/schedule/schedule",
+        "text": "排班",
+        "iconPath": "assets/icons/schedule.png",
+        "selectedIconPath": "assets/icons/schedule-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "assets/icons/profile.png",
+        "selectedIconPath": "assets/icons/profile-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

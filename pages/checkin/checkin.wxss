@@ -1,0 +1,160 @@
+.checkin-page {
+  min-height: 100vh;
+  background: #F5F6F7;
+  padding: 20rpx 30rpx 30rpx;
+}
+
+.checkin-card {
+  text-align: center;
+  padding: 50rpx 30rpx;
+}
+
+.checkin-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.status-icon-img {
+  width: 120rpx;
+  height: 120rpx;
+  margin-bottom: 20rpx;
+}
+
+.status-icon {
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  border-radius: 50%;
+  background: #F5F5F5;
+  font-size: 48rpx;
+  color: #ccc;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.status-icon.done {
+  background: linear-gradient(135deg, #81C784, #66BB6A);
+  color: #fff;
+}
+
+.status-text {
+  font-size: 32rpx;
+  color: #666;
+  font-weight: 500;
+}
+
+.checkin-status.active .status-text {
+  color: #66BB6A;
+}
+
+.soundwave-input {
+  margin-bottom: 40rpx;
+  text-align: left;
+}
+
+.input-label {
+  display: block;
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 16rpx;
+}
+
+.checkin-info {
+  margin-bottom: 30rpx;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+
+.info-label {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.info-value {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+.info-value.highlight {
+  color: #7B78ED;
+  font-size: 32rpx;
+}
+
+.checkin-btn {
+  margin-top: 20rpx;
+}
+
+.history-section {
+  margin-top: 30rpx;
+}
+
+.history-list {
+  padding: 10rpx 24rpx;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80rpx;
+  margin-right: 24rpx;
+}
+
+.date-day {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #333;
+}
+
+.date-month {
+  font-size: 22rpx;
+  color: #999;
+}
+
+.history-detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-time {
+  font-size: 26rpx;
+  color: #999;
+  margin-bottom: 4rpx;
+}
+
+.history-soundwave {
+  font-size: 28rpx;
+  color: #7B78ED;
+  font-weight: 500;
+}
+
+.history-status {
+  font-size: 24rpx;
+  padding: 6rpx 16rpx;
+  border-radius: 20rpx;
+}
+
+.history-status.done {
+  background: rgba(102, 187, 106, 0.1);
+  color: #66BB6A;
+}

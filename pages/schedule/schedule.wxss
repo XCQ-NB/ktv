@@ -1,0 +1,167 @@
+.schedule-page {
+  min-height: 100vh;
+  background: #F5F6F7;
+  padding: 20rpx 20rpx 30rpx;
+}
+
+.week-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24rpx;
+  gap: 40rpx;
+}
+
+.week-arrow {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  color: #7B78ED;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.06);
+}
+
+.week-text {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.schedule-grid {
+  padding: 20rpx;
+  overflow-x: auto;
+}
+
+.grid-header {
+  display: flex;
+  margin-bottom: 16rpx;
+}
+
+.time-col {
+  width: 80rpx;
+  flex-shrink: 0;
+}
+
+.day-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80rpx;
+}
+
+.day-name {
+  font-size: 22rpx;
+  color: #999;
+  margin-bottom: 4rpx;
+}
+
+.day-date {
+  font-size: 26rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+.day-date.today {
+  background: #7B78ED;
+  color: #fff;
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 48rpx;
+  text-align: center;
+}
+
+.time-slot {
+  display: flex;
+  margin-bottom: 8rpx;
+}
+
+.time-label {
+  width: 80rpx;
+  font-size: 22rpx;
+  color: #999;
+  padding-top: 16rpx;
+  flex-shrink: 0;
+}
+
+.slot-cells {
+  flex: 1;
+  display: flex;
+  gap: 6rpx;
+}
+
+.slot-cell {
+  flex: 1;
+  min-height: 64rpx;
+  border-radius: 8rpx;
+  background: #F5F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70rpx;
+}
+
+.slot-cell.mine {
+  background: rgba(123, 120, 237, 0.2);
+  border: 2rpx solid #7B78ED;
+}
+
+.slot-cell.booked {
+  background: rgba(66, 165, 245, 0.15);
+}
+
+.cell-text {
+  font-size: 18rpx;
+  color: #7B78ED;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  padding: 0 4rpx;
+}
+
+.slot-cell.booked .cell-text {
+  color: #42A5F5;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 40rpx;
+  margin-top: 24rpx;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.legend-dot {
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 6rpx;
+}
+
+.legend-dot.mine {
+  background: rgba(123, 120, 237, 0.2);
+  border: 2rpx solid #7B78ED;
+}
+
+.legend-dot.booked {
+  background: rgba(66, 165, 245, 0.15);
+}
+
+.legend-dot.free {
+  background: #F5F5F5;
+}

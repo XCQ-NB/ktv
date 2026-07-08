@@ -1,0 +1,23 @@
+<view class="landing-page">
+  <view class="brand-section">
+    <image class="logo" src="/assets/logo.png" mode="aspectFit"></image>
+    <text class="app-name">麦克团队</text>
+    <text class="app-desc">直播公会内部管理工具</text>
+  </view>
+
+  <view class="feature-section card">
+    <text class="feature-title">功能介绍</text>
+    <view class="feature-grid">
+      <view class="feature-item" wx:for="{{features}}" wx:key="name">
+        <image class="feature-icon" src="{{item.icon}}" mode="aspectFit"></image>
+        <text class="feature-name">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="action-section">
+    <text class="action-hint">登录后可使用更多功能</text>
+    <view class="btn-primary login-btn" bindtap="onLogin">登录 / 注册</view>
+    <text class="action-note">注册需管理员审核，仅限公会内部成员</text>
+  </view>
+</view>

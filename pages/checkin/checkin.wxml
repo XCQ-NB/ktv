@@ -1,0 +1,50 @@
+<view class="checkin-page">
+  <view class="checkin-card card">
+    <view class="checkin-status {{checkedIn ? 'active' : ''}}">
+      <image wx:if="{{!checkedIn}}" class="status-icon-img" src="/assets/icons/3d/note.png" mode="aspectFit"></image>
+      <view wx:else class="status-icon done">✓</view>
+      <text class="status-text">{{checkedIn ? '今日已打卡' : '今日未打卡'}}</text>
+    </view>
+
+    <view class="soundwave-input" wx:if="{{!checkedIn}}">
+      <text class="input-label">今日音浪数</text>
+      <input class="form-input" type="number" placeholder="请输入今日音浪数" value="{{soundwave}}" bindinput="onSoundwaveInput" />
+    </view>
+
+    <view class="checkin-info" wx:if="{{checkedIn}}">
+      <view class="info-row">
+        <text class="info-label">打卡时间</text>
+        <text class="info-value">{{checkinTime}}</text>
+      </view>
+      <view class="info-row">
+        <text class="info-label">音浪数</text>
+        <text class="info-value highlight">{{soundwave}}</text>
+      </view>
+    </view>
+
+    <view class="btn-primary checkin-btn {{soundwave ? '' : 'disabled'}}" wx:if="{{!checkedIn}}" bindtap="onCheckin">提交打卡</view>
+  </view>
+
+  <view class="history-section">
+    <view class="section-title">
+      <view class="bar purple"></view>
+      <text>近期打卡记录</text>
+    </view>
+    <view class="history-list card">
+      <view class="history-item" wx:for="{{history}}" wx:key="date">
+        <view class="history-date">
+          <text class="date-day">{{item.day}}</text>
+          <text class="date-month">{{item.month}}</text>
+        </view>
+        <view class="history-detail">
+          <text class="history-time">{{item.time}}</text>
+          <text class="history-soundwave">{{item.soundwave}} 音浪</text>
+        </view>
+        <view class="history-status done">已打卡</view>
+      </view>
+      <view class="empty-state" wx:if="{{history.length === 0}}">
+        <text>暂无打卡记录</text>
+      </view>
+    </view>
+  </view>
+</view>

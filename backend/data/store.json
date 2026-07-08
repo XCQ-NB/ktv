@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "zhaoli",
+      "password": "123456",
+      "realName": "赵丽",
+      "stageName": "赵丽",
+      "phone": "13800138000",
+      "avatar": "",
+      "monthlySoundwave": 244168,
+      "monthlySessions": 47,
+      "monthlyTaskRemaining": 5832,
+      "holidayBalance": 0.5,
+      "yesterdaySoundwave": 9852,
+      "todaySoundwave": 0,
+      "monthSoundwave": 20384,
+      "monthTaskTarget": 250000,
+      "monthTaskProgress": 8
+    }
+  ],
+  "ranking": [
+    { "rank": 1, "name": "李淑娴", "soundwave": 13849, "avatar": "" },
+    { "rank": 2, "name": "赵丽", "soundwave": 9852, "avatar": "" },
+    { "rank": 3, "name": "宋浩琳", "soundwave": 9668, "avatar": "" },
+    { "rank": 4, "name": "娄英健", "soundwave": 7715, "avatar": "" }
+  ],
+  "topStreamers": [
+    { "rank": 1, "name": "李淑娴", "soundwave": 5417, "avatar": "" },
+    { "rank": 2, "name": "宋浩琳", "soundwave": 4200, "avatar": "" },
+    { "rank": 3, "name": "娄英健", "soundwave": 3417, "avatar": "" }
+  ],
+  "notices": [
+    {
+      "id": 1,
+      "type": "important",
+      "typeText": "重要",
+      "title": "7月份音浪任务调整通知",
+      "preview": "经管理层研究决定，7月份音浪任务目标调整为25万...",
+      "date": "2026-07-01",
+      "read": false
+    },
+    {
+      "id": 2,
+      "type": "normal",
+      "typeText": "通知",
+      "title": "排班规则更新说明",
+      "preview": "即日起直播间排班实行新规则，请各位主播注意...",
+      "date": "2026-06-28",
+      "read": false
+    }
+  ],
+  "leaveRecords": [
+    {
+      "id": 1,
+      "userId": 1,
+      "type": "事假",
+      "startDate": "2026-06-15",
+      "endDate": "2026-06-15",
+      "reason": "家中有事",
+      "statusText": "已通过",
+      "statusClass": "approved"
+    }
+  ],
+  "checkins": []
+}

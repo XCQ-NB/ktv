@@ -1,0 +1,51 @@
+<view class="schedule-page">
+  <view class="week-nav">
+    <view class="week-arrow" bindtap="onPrevWeek">‹</view>
+    <text class="week-text">{{weekText}}</text>
+    <view class="week-arrow" bindtap="onNextWeek">›</view>
+  </view>
+
+  <view class="schedule-grid card">
+    <view class="grid-header">
+      <view class="time-col"></view>
+      <view class="day-col" wx:for="{{weekDays}}" wx:key="date">
+        <text class="day-name">{{item.name}}</text>
+        <text class="day-date {{item.isToday ? 'today' : ''}}">{{item.date}}</text>
+      </view>
+    </view>
+    <view class="grid-body">
+      <view class="time-slot" wx:for="{{timeSlots}}" wx:key="time" wx:for-item="slot">
+        <view class="time-label">{{slot.time}}</view>
+        <view class="slot-cells">
+          <view
+            class="slot-cell {{cell.status}}"
+            wx:for="{{slot.cells}}"
+            wx:key="day"
+            wx:for-item="cell"
+            bindtap="onSlotTap"
+            data-slot="{{slot.time}}"
+            data-day="{{cell.day}}"
+          >
+            <text wx:if="{{cell.status === 'mine'}}" class="cell-text">我的</text>
+            <text wx:elif="{{cell.status === 'booked'}}" class="cell-text">{{cell.name}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="legend">
+    <view class="legend-item">
+      <view class="legend-dot mine"></view>
+      <text>我的排班</text>
+    </view>
+    <view class="legend-item">
+      <view class="legend-dot booked"></view>
+      <text>已排班</text>
+    </view>
+    <view class="legend-item">
+      <view class="legend-dot free"></view>
+      <text>空闲</text>
+    </view>
+  </view>
+</view>

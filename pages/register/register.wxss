@@ -1,0 +1,117 @@
+.register-page {
+  min-height: 100vh;
+  background: #F5F6F7;
+  padding: 30rpx 30rpx 60rpx;
+}
+
+.brand-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.logo {
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 16rpx;
+}
+
+.app-name {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #7B78ED;
+  margin-bottom: 8rpx;
+}
+
+.app-desc {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.form-card {
+  margin-bottom: 30rpx;
+}
+
+.avatar-upload {
+  display: flex;
+  justify-content: center;
+  margin: 30rpx 0 40rpx;
+}
+
+.avatar-placeholder {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  border: 4rpx dashed #7B78ED;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #FAFAFA;
+}
+
+.avatar-placeholder .plus {
+  font-size: 48rpx;
+  color: #7B78ED;
+  line-height: 1;
+}
+
+.avatar-placeholder .upload-text {
+  font-size: 22rpx;
+  color: #7B78ED;
+  margin-top: 8rpx;
+}
+
+.avatar-img {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+
+.form-group {
+  margin-bottom: 28rpx;
+}
+
+.form-input.picker {
+  display: flex;
+  align-items: center;
+  line-height: 88rpx;
+}
+
+.form-input.placeholder {
+  color: #999;
+}
+
+.agreement {
+  margin-bottom: 30rpx;
+  padding: 0 10rpx;
+}
+
+.agreement-label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.agreement-label checkbox {
+  transform: scale(0.8);
+  margin-right: 8rpx;
+}
+
+.link {
+  color: #7B78ED;
+}
+
+.submit-btn {
+  margin-bottom: 20rpx;
+}
+
+.submit-note {
+  display: block;
+  text-align: center;
+  font-size: 22rpx;
+  color: #bbb;
+}

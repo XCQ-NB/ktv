@@ -1,0 +1,68 @@
+<view class="dashboard-page">
+  <!-- 时间筛选 -->
+  <view class="time-tabs">
+    <view
+      class="tab-item {{activeTab === item.id ? 'active' : ''}}"
+      wx:for="{{tabs}}"
+      wx:key="id"
+      bindtap="onTabChange"
+      data-id="{{item.id}}"
+    >{{item.name}}</view>
+  </view>
+
+  <!-- 今日优秀主播 -->
+  <view class="card podium-card">
+    <view class="section-title">
+      <view class="bar orange"></view>
+      <view class="bar purple"></view>
+      <text>今日优秀主播</text>
+    </view>
+    <view class="podium">
+      <view class="podium-item second" wx:if="{{topStreamers[1]}}">
+        <view class="podium-avatar">
+          <text class="avatar-char">{{topStreamers[1].initial}}</text>
+        </view>
+        <view class="podium-block silver">
+          <text class="podium-rank">2</text>
+        </view>
+        <text class="podium-name">{{topStreamers[1].name}}</text>
+        <text class="podium-score">{{topStreamers[1].soundwave}}</text>
+      </view>
+      <view class="podium-item first" wx:if="{{topStreamers[0]}}">
+        <view class="podium-avatar large">
+          <text class="avatar-char">{{topStreamers[0].initial}}</text>
+        </view>
+        <view class="podium-block gold">
+          <text class="podium-rank">1</text>
+        </view>
+        <text class="podium-name">{{topStreamers[0].name}}</text>
+        <text class="podium-score">{{topStreamers[0].soundwave}}</text>
+      </view>
+      <view class="podium-item third" wx:if="{{topStreamers[2]}}">
+        <view class="podium-avatar">
+          <text class="avatar-char">{{topStreamers[2].initial}}</text>
+        </view>
+        <view class="podium-block bronze">
+          <text class="podium-rank">3</text>
+        </view>
+        <text class="podium-name">{{topStreamers[2].name}}</text>
+        <text class="podium-score">{{topStreamers[2].soundwave}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 我的数据 -->
+  <view class="card">
+    <view class="section-title">
+      <view class="bar green"></view>
+      <view class="bar purple"></view>
+      <text>我的数据</text>
+    </view>
+    <view class="data-list">
+      <view class="data-row" wx:for="{{myData}}" wx:key="label">
+        <text class="data-label">{{item.label}}</text>
+        <text class="data-value {{item.highlight ? 'highlight' : ''}}">{{item.value}}</text>
+      </view>
+    </view>
+  </view>
+</view>

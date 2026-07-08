@@ -1,0 +1,111 @@
+.leave-page {
+  min-height: 100vh;
+  background: #F5F6F7;
+  padding: 20rpx 30rpx 30rpx;
+}
+
+.tabs {
+  display: flex;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 8rpx;
+  margin-bottom: 24rpx;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 16rpx 0;
+  font-size: 28rpx;
+  color: #666;
+  border-radius: 12rpx;
+}
+
+.tab.active {
+  background: #7B78ED;
+  color: #fff;
+  font-weight: 500;
+}
+
+.form-card {
+  margin-bottom: 30rpx;
+}
+
+.form-group {
+  margin-bottom: 28rpx;
+}
+
+.form-input.picker {
+  display: flex;
+  align-items: center;
+  line-height: 88rpx;
+}
+
+.form-input.placeholder {
+  color: #999;
+}
+
+.form-textarea {
+  width: 100%;
+  height: 200rpx;
+  padding: 20rpx 24rpx;
+  background: #FAFAFA;
+  border: 2rpx solid #EEEEEE;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+}
+
+.balance-info {
+  font-size: 26rpx;
+  color: #7B78ED;
+  padding: 16rpx 0;
+}
+
+.history-card {
+  margin-bottom: 20rpx;
+}
+
+.record-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12rpx;
+}
+
+.record-type {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.record-status {
+  font-size: 24rpx;
+  padding: 4rpx 16rpx;
+  border-radius: 20rpx;
+}
+
+.record-status.pending {
+  background: rgba(255, 167, 38, 0.1);
+  color: #FFA726;
+}
+
+.record-status.approved {
+  background: rgba(102, 187, 106, 0.1);
+  color: #66BB6A;
+}
+
+.record-status.rejected {
+  background: rgba(255, 82, 82, 0.1);
+  color: #FF5252;
+}
+
+.record-dates {
+  font-size: 26rpx;
+  color: #999;
+  margin-bottom: 8rpx;
+}
+
+.record-reason {
+  font-size: 26rpx;
+  color: #666;
+}

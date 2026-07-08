@@ -1,0 +1,153 @@
+.task-page {
+  min-height: 100vh;
+  background: #F5F6F7;
+  padding: 20rpx 30rpx 30rpx;
+}
+
+.task-overview {
+  margin-bottom: 30rpx;
+}
+
+.overview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.overview-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.overview-percent {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #7B78ED;
+}
+
+.progress-bar {
+  height: 16rpx;
+  background: #F0F0F5;
+  border-radius: 8rpx;
+  overflow: hidden;
+  margin-bottom: 30rpx;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #A7A7FF, #7B78ED);
+  border-radius: 8rpx;
+}
+
+.overview-stats {
+  display: flex;
+  align-items: center;
+}
+
+.stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 4rpx;
+}
+
+.stat-label {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.stat-divider {
+  width: 1rpx;
+  height: 60rpx;
+  background: #EEEEEE;
+}
+
+.task-list {
+  padding: 10rpx 24rpx;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-date {
+  width: 80rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20rpx;
+}
+
+.task-day {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #333;
+}
+
+.task-weekday {
+  font-size: 22rpx;
+  color: #999;
+}
+
+.task-bar-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.task-bar {
+  flex: 1;
+  height: 12rpx;
+  background: #F0F0F5;
+  border-radius: 6rpx;
+  overflow: hidden;
+}
+
+.task-bar-fill {
+  height: 100%;
+  background: #7B78ED;
+  border-radius: 6rpx;
+}
+
+.task-amount {
+  font-size: 24rpx;
+  color: #7B78ED;
+  font-weight: 500;
+  min-width: 100rpx;
+  text-align: right;
+}
+
+.task-status {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  background: #F5F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  color: #ccc;
+  margin-left: 16rpx;
+}
+
+.task-status.done {
+  background: rgba(102, 187, 106, 0.1);
+  color: #66BB6A;
+}

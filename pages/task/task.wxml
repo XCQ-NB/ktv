@@ -1,0 +1,51 @@
+<view class="task-page">
+  <view class="task-overview card">
+    <view class="overview-header">
+      <text class="overview-title">本月任务进度</text>
+      <text class="overview-percent">{{progress}}%</text>
+    </view>
+    <view class="progress-bar">
+      <view class="progress-fill" style="width: {{progress}}%"></view>
+    </view>
+    <view class="overview-stats">
+      <view class="stat-item">
+        <text class="stat-value">{{current}}</text>
+        <text class="stat-label">已完成</text>
+      </view>
+      <view class="stat-divider"></view>
+      <view class="stat-item">
+        <text class="stat-value">{{target}}</text>
+        <text class="stat-label">目标</text>
+      </view>
+      <view class="stat-divider"></view>
+      <view class="stat-item">
+        <text class="stat-value">{{remaining}}</text>
+        <text class="stat-label">剩余</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">
+      <view class="bar green"></view>
+      <text>每日任务明细</text>
+    </view>
+    <view class="task-list card">
+      <view class="task-item" wx:for="{{dailyTasks}}" wx:key="date">
+        <view class="task-date">
+          <text class="task-day">{{item.day}}</text>
+          <text class="task-weekday">{{item.weekday}}</text>
+        </view>
+        <view class="task-bar-wrap">
+          <view class="task-bar">
+            <view class="task-bar-fill" style="width: {{item.percent}}%"></view>
+          </view>
+          <text class="task-amount">{{item.amount}}</text>
+        </view>
+        <view class="task-status {{item.done ? 'done' : ''}}">
+          {{item.done ? '✓' : '-'}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

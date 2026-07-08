@@ -1,0 +1,58 @@
+<view class="leave-page">
+  <view class="tabs">
+    <view class="tab {{activeTab === 'apply' ? 'active' : ''}}" bindtap="onTabChange" data-tab="apply">申请请假</view>
+    <view class="tab {{activeTab === 'history' ? 'active' : ''}}" bindtap="onTabChange" data-tab="history">请假记录</view>
+  </view>
+
+  <view wx:if="{{activeTab === 'apply'}}">
+    <view class="form-card card">
+      <view class="form-group">
+        <view class="form-label">请假类型<text class="required">*</text></view>
+        <picker range="{{leaveTypes}}" value="{{leaveTypeIndex}}" bindchange="onTypeChange">
+          <view class="form-input picker">{{leaveTypes[leaveTypeIndex]}}</view>
+        </picker>
+      </view>
+
+      <view class="form-group">
+        <view class="form-label">开始日期<text class="required">*</text></view>
+        <picker mode="date" value="{{startDate}}" bindchange="onStartDateChange">
+          <view class="form-input picker {{startDate ? '' : 'placeholder'}}">{{startDate || '请选择开始日期'}}</view>
+        </picker>
+      </view>
+
+      <view class="form-group">
+        <view class="form-label">结束日期<text class="required">*</text></view>
+        <picker mode="date" value="{{endDate}}" bindchange="onEndDateChange">
+          <view class="form-input picker {{endDate ? '' : 'placeholder'}}">{{endDate || '请选择结束日期'}}</view>
+        </picker>
+      </view>
+
+      <view class="form-group">
+        <view class="form-label">请假原因<text class="required">*</text></view>
+        <textarea class="form-textarea" placeholder="请输入请假原因" value="{{reason}}" bindinput="onReasonInput" maxlength="200"></textarea>
+      </view>
+
+      <view class="balance-info">
+        <text>当前假期余额：{{holidayBalance}} 天</text>
+      </view>
+    </view>
+
+    <view class="btn-primary {{canSubmit ? '' : 'disabled'}}" bindtap="onSubmit">提交申请</view>
+  </view>
+
+  <view wx:if="{{activeTab === 'history'}}">
+    <view class="history-list">
+      <view class="history-card card" wx:for="{{records}}" wx:key="id">
+        <view class="record-header">
+          <text class="record-type">{{item.type}}</text>
+          <text class="record-status {{item.statusClass}}">{{item.statusText}}</text>
+        </view>
+        <view class="record-dates">{{item.startDate}} 至 {{item.endDate}}</view>
+        <view class="record-reason">{{item.reason}}</view>
+      </view>
+      <view class="empty-state" wx:if="{{records.length === 0}}">
+        <text>暂无请假记录</text>
+      </view>
+    </view>
+  </view>
+</view>
